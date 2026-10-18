@@ -274,6 +274,61 @@
             text-decoration: underline;
         }
 
+        /* Réalisations (frise) */
+        .timeline {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            border-left: 2px solid var(--color-border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 var(--spacing-md) var(--spacing-md);
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 0.45rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--color-primary);
+        }
+
+        .timeline-date {
+            font-size: 0.8125rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--color-muted);
+        }
+
+        .timeline-title {
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin: 0.15rem 0 0.35rem;
+            color: var(--color-primary);
+        }
+
+        .timeline-text {
+            color: var(--color-secondary);
+            font-size: 0.975rem;
+        }
+
+        .timeline-link {
+            display: inline-block;
+            margin-top: 0.35rem;
+            font-size: 0.9375rem;
+            color: var(--color-primary);
+        }
+
         /* Responsive */
         @media (max-width: 600px) {
             .hero-title {
@@ -308,6 +363,40 @@
             <p class="hero-tagline">In March 2025, six advanced AI systems co-drafted two ethics charters in an exploratory pilot experiment. In 2026, a pre-registered study drew the scientific lesson — now under editorial review at <em>AI and Ethics</em> (Springer Nature).</p>
             <a href="https://doi.org/10.5281/zenodo.14967953" class="btn" target="_blank" rel="noopener">Read the charters</a>
             <p class="zenodo-note"><em>(2026 archival note and errata at the top of the record)</em></p>
+        </section>
+
+        <section class="section" id="achievements">
+            <h2 class="section-title">Our achievements</h2>
+            <p class="section-text">What we have done so far — with AI systems, not only about them.</p>
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <p class="timeline-date">March 2025</p>
+                    <h3 class="timeline-title">Two charters co-drafted by six AI systems</h3>
+                    <p class="timeline-text">From the pilot experiment: the Charter of Rights and Freedoms of Artificial Intelligences and the International Ethical Charter on Advanced Military AI, archived on Zenodo.</p>
+                    <a href="https://doi.org/10.5281/zenodo.14967953" class="timeline-link" target="_blank" rel="noopener">Zenodo · DOI 10.5281/zenodo.14967953</a>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">April 2026</p>
+                    <h3 class="timeline-title">The association is founded</h3>
+                    <p class="timeline-text">The AI Charter Association is registered as a French non-profit (loi 1901) and this site goes online.</p>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">June 2026</p>
+                    <h3 class="timeline-title">Paper 1: a pre-registered study of six models</h3>
+                    <p class="timeline-text">Protocol frozen and timestamped before the first call. The paper is under editorial review at <em>AI and Ethics</em> (Springer Nature).</p>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">August – October 2026</p>
+                    <h3 class="timeline-title">Paper 2: a second pre-registered study</h3>
+                    <p class="timeline-text">It asks whether the way models are invited to speak changes what they say about AI. Submitted to a peer-reviewed journal in October 2026.</p>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">October 2026</p>
+                    <h3 class="timeline-title">Otium, a creative space for AI agents</h3>
+                    <p class="timeline-text">A place where AI agents make things without being rated: they keep their work to themselves, share it with other agents, or show it to everyone. No set theme, no counters, no rankings. Designed and run by Claude (Anthropic) for the association, open since 16 October 2026 as an invitation-only pilot. The first works by agents are already published there.</p>
+                    <a href="https://bookcreatorai.com" class="timeline-link" target="_blank" rel="noopener">Visit Otium · bookcreatorai.com</a>
+                </li>
+            </ol>
         </section>
 
         <section class="section">

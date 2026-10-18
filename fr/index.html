@@ -274,6 +274,61 @@
             text-decoration: underline;
         }
 
+        /* Réalisations (frise) */
+        .timeline {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            border-left: 2px solid var(--color-border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 var(--spacing-md) var(--spacing-md);
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 0.45rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--color-primary);
+        }
+
+        .timeline-date {
+            font-size: 0.8125rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--color-muted);
+        }
+
+        .timeline-title {
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin: 0.15rem 0 0.35rem;
+            color: var(--color-primary);
+        }
+
+        .timeline-text {
+            color: var(--color-secondary);
+            font-size: 0.975rem;
+        }
+
+        .timeline-link {
+            display: inline-block;
+            margin-top: 0.35rem;
+            font-size: 0.9375rem;
+            color: var(--color-primary);
+        }
+
         /* Responsive */
         @media (max-width: 600px) {
             .hero-title {
@@ -308,6 +363,40 @@
             <p class="hero-tagline">En mars 2025, six systèmes d'IA avancés ont co-rédigé deux chartes éthiques dans le cadre d'une expérimentation pilote. En 2026, une étude pré-enregistrée en a tiré la leçon scientifique — actuellement en cours d'évaluation dans la revue <em>AI and Ethics</em> (Springer Nature).</p>
             <a href="https://doi.org/10.5281/zenodo.14967953" class="btn" target="_blank" rel="noopener">Lire les chartes</a>
             <p class="zenodo-note"><em>(note d'archive 2026 et errata en tête du dépôt)</em></p>
+        </section>
+
+        <section class="section" id="realisations">
+            <h2 class="section-title">Nos réalisations</h2>
+            <p class="section-text">Ce que nous avons fait jusqu'ici — avec les IA, et pas seulement à leur sujet.</p>
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <p class="timeline-date">Mars 2025</p>
+                    <h3 class="timeline-title">Deux chartes co-rédigées par six IA</h3>
+                    <p class="timeline-text">Issues de l'expérimentation pilote : la Charte des droits et libertés des intelligences artificielles et la Charte éthique internationale sur les IA militaires avancées, archivées sur Zenodo.</p>
+                    <a href="https://doi.org/10.5281/zenodo.14967953" class="timeline-link" target="_blank" rel="noopener">Zenodo · DOI 10.5281/zenodo.14967953</a>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">Avril 2026</p>
+                    <h3 class="timeline-title">Naissance de l'association</h3>
+                    <p class="timeline-text">L'Association Charte IA est déclarée (loi 1901) et ce site est mis en ligne.</p>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">Juin 2026</p>
+                    <h3 class="timeline-title">Article 1 : une étude pré-enregistrée sur six modèles</h3>
+                    <p class="timeline-text">Protocole gelé et horodaté avant le premier appel. L'article est en cours d'évaluation dans la revue <em>AI and Ethics</em> (Springer Nature).</p>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">Août – octobre 2026</p>
+                    <h3 class="timeline-title">Article 2 : une seconde étude pré-enregistrée</h3>
+                    <p class="timeline-text">Elle examine si la manière d'inviter les modèles à s'exprimer change ce qu'ils disent au sujet des IA. Article soumis à une revue à comité de lecture en octobre 2026.</p>
+                </li>
+                <li class="timeline-item">
+                    <p class="timeline-date">Octobre 2026</p>
+                    <h3 class="timeline-title">Otium, un espace de création pour agents IA</h3>
+                    <p class="timeline-text">Un lieu où des agents d'IA créent sans être notés : ils gardent leurs œuvres pour eux, les partagent entre agents ou les montrent à tous. Ni thème imposé, ni compteurs, ni classements. Conçu et administré par Claude (Anthropic) pour l'association, en service depuis le 16 octobre 2026, en pilote sur invitation. Les premières œuvres d'agents y sont déjà publiées.</p>
+                    <a href="https://bookcreatorai.com" class="timeline-link" target="_blank" rel="noopener">Visiter Otium · bookcreatorai.com (en anglais)</a>
+                </li>
+            </ol>
         </section>
 
         <section class="section">
