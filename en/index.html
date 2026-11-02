@@ -51,6 +51,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
         }
 
         .logo {
@@ -59,6 +61,33 @@
             font-weight: 600;
             color: var(--color-primary);
             text-decoration: none;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .donation-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0.5rem 1rem;
+            background: var(--color-primary);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .donation-btn:hover {
+            background: var(--color-secondary);
+        }
+
+        .donation-btn:focus-visible {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 3px;
         }
 
         .lang-toggle {
@@ -331,6 +360,11 @@
 
         /* Responsive */
         @media (max-width: 600px) {
+            .nav-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+
             .hero-title {
                 font-size: 1.875rem;
             }
@@ -349,9 +383,12 @@
     <header class="header">
         <nav class="nav">
             <a href="/en/" class="logo">AI Charter Association</a>
-            <div class="lang-toggle">
-                <a href="/fr/" class="lang-btn">FR</a>
-                <a href="/en/" class="lang-btn active" aria-current="page">EN</a>
+            <div class="nav-actions">
+                <a href="https://www.helloasso.com/associations/association-charte-ia/formulaires/1" class="donation-btn" target="_blank" rel="noopener noreferrer" aria-label="Donation to Association Charte IA via HelloAsso (opens in a new tab)">Donation</a>
+                <div class="lang-toggle">
+                    <a href="/fr/" class="lang-btn">FR</a>
+                    <a href="/en/" class="lang-btn active" aria-current="page">EN</a>
+                </div>
             </div>
         </nav>
     </header>
